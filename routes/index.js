@@ -7,7 +7,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/hello', function(req, res) {
-  res.send("Hello world!"); //send respond to client
+  //res.send("Hello world!"); //send respond to client
+  res.setHeader("Content-Type","application/json");
+  res.send({"res_text":"Hello World!"});
 });
 
 module.exports = router;
